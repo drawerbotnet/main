@@ -1,13 +1,3 @@
-import (
-    "fmt"
-    "net"
-    "time"
-    "strings"
-    "strconv"
-    "log"
-    "os"
-)
-
 for {
         var botCatagory string
         var botCount int
@@ -36,4 +26,6 @@ for {
             continue
         }
 
-        
+        if cmd == "help" || cmd == "HELP" || cmd == "?"  || cmd == "methods" {
+            this.conn.Write([]byte("\033[2J\033[1H"))
+            
